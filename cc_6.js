@@ -29,3 +29,18 @@ const calculateBonus = (salary, performanceRating) => {
 console.log(`Yay! Bonus: $${calculateBonus(5000, "Excellent")}`);
 
 console.log(`Yay! Bonus: $${calculateBonus(7000, "Good")}`);
+
+//Task 4
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    let service = {
+        "Basic": 10,    //object to store plans
+        "Premium": 20,
+        "Enterprise": 50
+    }
+    return ((service[plan]) * months) - discount
+}
+let costPlan = calculateSubscriptionCost("Basic", 6, 10)
+console.log(`Total Cost: $${costPlan}`);
+//logging using the same variable to override function
+costPlan = calculateSubscriptionCost("Premium", 12, 0)
+console.log(`Total Cost: $${costPlan}`);
