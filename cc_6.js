@@ -44,3 +44,14 @@ console.log(`Total Cost: $${costPlan}`);
 //logging using the same variable to override function
 costPlan = calculateSubscriptionCost("Premium", 12, 0)
 console.log(`Total Cost: $${costPlan}`);
+
+//Task 5
+function convertCurrency(amount, exchangeRate) {
+    return (amount * exchangeRate).toFixed(2)
+}
+//logging converted currency of various amounts
+let converted = convertCurrency(100, 1.1);
+console.log(`Converted Amount: $${converted}`);
+converted = convertCurrency(250, 0.85);
+console.log(`Converted Amount: $${converted}`);
+
