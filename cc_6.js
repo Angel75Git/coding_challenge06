@@ -64,4 +64,16 @@ function applyBulkDiscount(purchaseAmounts, discountFunciton){
 let discount10 = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 console.log(discount10);
 
+//Task 7
+function createExpenseTracker(){
+    let counter = 0;
+    return function(amount){
+        counter += amount;
+        return counter
+    };    
+}
+//Keeping running total
+let tracker = createExpenseTracker()
+console.log(tracker(200));
+console.log(tracker(350));
 
