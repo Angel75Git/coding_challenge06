@@ -55,3 +55,13 @@ console.log(`Converted Amount: $${converted}`);
 converted = convertCurrency(250, 0.85);
 console.log(`Converted Amount: $${converted}`);
 
+//Task 6 
+let orders = [200, 600, 1200, 450, 800];
+function applyBulkDiscount(purchaseAmounts, discountFunciton){
+    return purchaseAmounts.map(discountFunciton);
+}
+//Recalled the applyBulkDiscount from parameter above (discountFunction)
+let discount10 = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
+console.log(discount10);
+
+
