@@ -14,3 +14,18 @@ function calculateSalesTax(amount, taxRate) {
 console.log(`Sales Tax: $${calculateSalesTax(100, .07)}`)
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`)
 
+//Task 3
+const calculateBonus = (salary, performanceRating) => {
+//Create object percent to house different ratings    
+    let Percent = { 
+        "Excellent": 0.20,
+        "Good": 0.10,
+        "Average": 0.05
+    }
+    let bonus = salary * (Percent[performanceRating])
+    return bonus
+}
+//logging bonus w/ different ratings
+console.log(`Yay! Bonus: $${calculateBonus(5000, "Excellent")}`);
+
+console.log(`Yay! Bonus: $${calculateBonus(7000, "Good")}`);
