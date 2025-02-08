@@ -77,3 +77,12 @@ let tracker = createExpenseTracker()
 console.log(tracker(200));
 console.log(tracker(350));
 
+//Task 8
+function calculateYearsToPromotion(employeeLevel){
+   if (employeeLevel == 10){
+    return 0;
+}//Will continuously repeat until it gets to 10 by adding one to employ lvl
+    return calculateYearsToPromotion(employeeLevel + 1) +2;
+}
+console.log(`Years to Level 10: ${calculateYearsToPromotion(7)} years`);
+console.log(`Years to Level 10: ${calculateYearsToPromotion(5)} years`);
